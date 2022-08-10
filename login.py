@@ -52,10 +52,10 @@ def do_admin_login():
 #     height=""
 #     weight=""
 #     if request.method == "POST":
-      name =  request.form['name']
-      print(name)
-      Dob = request.form['Dob']
-      print(Dob)
+    name =  request.form['name']
+    print(name)
+    Dob = request.form['Dob']
+    print(Dob)
 #         email = request.form['email']
 #         mob = request.form['mob']
 #         occupation = request.form['occupation']
