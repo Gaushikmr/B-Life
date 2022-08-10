@@ -24,7 +24,7 @@ def mainPage():
     
 #     return render_template('index.html', **templateData)
 
-@app.route('/donation', methods=['POST'])
+@app.route('/donation', methods=['GET','POST'])
 def do_admin_login():
 #     name =""
 #     Dob=""
