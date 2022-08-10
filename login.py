@@ -106,8 +106,15 @@ def do_admin_login():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=5000,debug=1)
+#     app.run(host="0.0.0.0",port=5000,debug=1)
 #     app.secret_key = os.urandom(12)
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
+
+    sess.init_app(app)
+
+    app.debug = True
+    app.run(host="0.0.0.0",port=5000)
     
     
 
