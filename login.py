@@ -24,7 +24,12 @@ def mainPage():
     
 #     return render_template('index.html', **templateData)
 
-@app.route('/donation', methods=['GET','POST'])
+@app.route('/donation', methods=['GET'])
+def do_admin():
+    return render_template('donation.html')
+
+
+@app.route('/donation', methods=['POST'])
 def do_admin_login():
 #     name =""
 #     Dob=""
@@ -79,7 +84,7 @@ def do_admin_login():
 #         motherinlaw= request.form['motherinlaw']
 #         height= request.form['height']
 #         weight= request.form['weight']
-    return render_template('donation.html')
+    
 
 
 # @app.route('/register',methods=['POST'])
