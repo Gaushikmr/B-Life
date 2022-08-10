@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-from flask import Flask
-from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
+# from flask import Flask
+from flask import Flask, flash, redirect, render_template, request, session, abort, url_for, session
+from flask.ext.session import Session
+
+SESSION_TYPE = 'memcache'
+
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+sess = Session()
+
 
 @app.route('/')
 def index():
