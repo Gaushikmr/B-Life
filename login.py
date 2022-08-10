@@ -14,9 +14,15 @@ def index():
 
 #       return render_template("donation.html")
 
-@app.route('/index')
+@app.route('/index', methods=['GET','POST'])
 def mainPage():
-    return render_template('index.html', **templateData)
+    return render_template('index.html')
+
+
+# @app.route('/index', methods=['POST'])
+# def mainPageButton():
+    
+#     return render_template('index.html', **templateData)
 
 @app.route('/donation', methods=['POST'])
 def do_admin_login():
