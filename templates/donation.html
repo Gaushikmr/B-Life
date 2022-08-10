@@ -18,7 +18,20 @@
     <div class="container">
         <header>Registration</header>
 
-        <form action="#">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+   
+        {% for category, message in messages %}
+    
+        <br><br>
+        <font color="red">
+        {{ message }} </font>
+        {% endfor %}
+    <!-- </ul> -->
+        {% endif %}
+        {% endwith %}
+
+        <form action="/donation" method="POST">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Personal Details</span>
@@ -266,12 +279,16 @@
                     </div> 
 
 
+                    
                     <button class="sumbit">
-                        <a href="/donation">  
+   <!--                      <a href="/donation">   -->
                         <span class="btnText">Submit</span>
                         <i class="uil uil-navigator"></i>
-                        </a>
+                        <!-- </a> -->
                     </button>
+                    <input type="submit" value="submit">
+                    
+
                     
                 </div> 
             </div>
