@@ -74,15 +74,15 @@ def do_admin_login():
 #         weight= request.form['weight']
 
 
-@app.route('/register',methods=['POST'])
-def do_register():
-    return render_template('donation.html')
+# @app.route('/register',methods=['POST'])
+# def do_register():
+#     return render_template('donation.html')
 
-@app.route('/postRegister',methods=['POST'])
-def save_register():
-    username = request.form['username'] 
-    password = request.form['password']
-    confirmpassword = request.form['confirmpassword']
+# @app.route('/postRegister',methods=['POST'])
+# def save_register():
+#     username = request.form['username'] 
+#     password = request.form['password']
+#     confirmpassword = request.form['confirmpassword']
 
    
 
