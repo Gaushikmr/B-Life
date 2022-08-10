@@ -61,6 +61,11 @@ def do_admin_login():
     print(name)
     Dob = request.form['Dob']
     print(Dob)
+    flash('Data Captured')
+    return do_admin()
+    
+    
+    
 #         email = request.form['email']
 #         mob = request.form['mob']
 #         occupation = request.form['occupation']
