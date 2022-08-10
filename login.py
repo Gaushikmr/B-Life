@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for, session
+from flask_session.__init__ import Session
 # from flask.ext.session import Session
 
 SESSION_TYPE = 'memcache'
@@ -8,7 +9,7 @@ SESSION_TYPE = 'memcache'
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-sess = Session()
+sess = session()
 
 
 @app.route('/')
