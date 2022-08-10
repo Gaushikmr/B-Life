@@ -9,7 +9,7 @@ SESSION_TYPE = 'memcache'
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-sess = session()
+sess = Session()
 
 
 @app.route('/')
