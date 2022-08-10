@@ -79,6 +79,7 @@ def do_admin_login():
 #         motherinlaw= request.form['motherinlaw']
 #         height= request.form['height']
 #         weight= request.form['weight']
+    return render_template('donation.html')
 
 
 # @app.route('/register',methods=['POST'])
